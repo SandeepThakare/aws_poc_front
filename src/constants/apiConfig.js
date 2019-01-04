@@ -1,0 +1,1 @@
+export const api_prefix = 'https://rzj58qytk0.execute-api.us-east-1.amazonaws.com/dev'
