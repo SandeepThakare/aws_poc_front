@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export default function getUserReducer(state = [], action) {
-    console.log('Action payload ===> ', action);
+    console.log('Action payload ===> ', typeof action.payload, action.payload);
     switch (action.type) {
         case GET_USER.GET_USER_LIST_SUCCESS:
             // return (action.payload);

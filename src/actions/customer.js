@@ -23,7 +23,7 @@ export function getCustomer() {
     return function (dispatch, getState) {
         axios.get(`${GET_USER.GET_USER_Api}`)
             .then(res => {
-                console.log('Response is ---- ', res);
+                console.log('Response is ---- ', typeof res.data.Items, res.data.Items);
                 return dispatch({ type: GET_USER.GET_USER_LIST_SUCCESS, payload: res.data.Items });
             })
             .catch(error => {

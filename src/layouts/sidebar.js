@@ -138,10 +138,10 @@ export default class Sidebar extends Component {
                             </ul>
                         </footer>
                     </aside>
-                    <article className="container content dashboard-page">
+                    <article className="container-fluid content dashboard-page" style={{paddingRight:'130px'}}>
                         <section style={articleStyle} className="section">
                             <div className="sameheight-container">
-                                <div >
+                                <div className="">
                                     <div className="card sameheight-item stats" data-exclude="xs">
                                         <div className="card-block">
                                             <Routing />

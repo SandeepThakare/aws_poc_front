@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { addCustomer } from '../actions/customer';
 import { getCustomer } from '../actions/customer';
+import { Link } from 'react-router-dom';
 
 class POC_Lambda extends Component {
 
@@ -24,15 +24,6 @@ class POC_Lambda extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentWillMount() {
-        this.props.getCustomer();
-    }
-
-    componentWillReceiveProps(nextProps) {
-        // debugger
-        console.log(">>>>>>>>>>>>", nextProps)
-    }
-    
     renderField = ({ input, label, placeholder, value, type, meta: { touched, error } }) => (
 
         <div className="form-group col-lg-6">
@@ -64,15 +55,25 @@ class POC_Lambda extends Component {
             <div >
                 <nav className="navbar navbar-inverse">
                     <div className="container">
-                        <ul className="nav left-al">
-                            <li><a href="#">New Customer</a></li>
-                            <li><a href="#">View Customer</a></li>
+                        <ul className="nav">
+                            <li className='active'>
+                                <Link to={'/poc_lambda'}>
+                                    <i className="fa fa-plus"></i>   New Customer
+                                </Link>
+                            </li>
+                            {/* <li className='active'><a href="#">New Customer</a></li> */}
+                            {/* <li><a href="#">View Customer</a></li> */}
+                            <li>
+                                <Link to={'/customers_list'}>
+                                    <i className="fa fa-list"></i>   View Customer
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </nav>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <h4 className="float-left col-lg-12" style={{ marginLeft: '-420px' }}> <b>Add Customer Here</b> </h4><br /><br />
-                    <div className="container pad-200">
+                    <h4 className="float-left col-lg-12" style={{ marginLeft: '-400px' }}> <b>Add Customer Here</b> </h4><br /><br />
+                    <div className="">
                         <Field
                             name='email'
                             type='text'
@@ -149,7 +150,7 @@ class POC_Lambda extends Component {
                             Submit
                         </button>
                         <button type="clear" style={{ marginLeft: "10px" }} name="Submit" value="Submit" className="btn btn-danger float-left">
-                            Cancle
+                            Cancel
                         </button>
                     </div>
                 </form>
@@ -159,16 +160,13 @@ class POC_Lambda extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-    // return null;
+    return null;
     console.log('map state ---- ', state)
-    return {
-        getUserList: state.getUserReducer.Get_User_Response
-    }
 }
 
 POC_Lambda = reduxForm({
     form: 'lambda_form'
 })(POC_Lambda);
 
-export default connect(mapStateToProps, { addCustomer, getCustomer })(POC_Lambda);
+export default connect(mapStateToProps, { addCustomer })(POC_Lambda);
 // export default POC_Lambda;
