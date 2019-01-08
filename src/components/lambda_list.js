@@ -11,7 +11,7 @@ class CustomersView extends Component {
         this.state = {
             customersList: [],
             openModal: false,
-            editModelIndex: null
+            editModelIndex: ''
         }
 
         this.handlePopup = this.handlePopup.bind(this);
@@ -76,7 +76,7 @@ class CustomersView extends Component {
                             </tbody>
                         </table>
                     </div>
-                    {this.state.openModal ? <EditCustomer modelData={this.state.customersList[this.state.editModelIndex]}/> : null}
+                    {this.state.openModal ? <EditCustomer email={this.state.customersList[this.state.editModelIndex].email}/> : null}
                 </div>
             </div>
         )

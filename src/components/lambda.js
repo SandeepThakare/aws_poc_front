@@ -41,12 +41,14 @@ class POC_Lambda extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
+
+        
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Event ----- ', event, this.state);
-        this.props.addCustomer(this.state);
+        console.log('Event ----- ', this.props);
+        this.props.addCustomer(this.state, this.props);
     }
 
     render() {
@@ -72,7 +74,7 @@ class POC_Lambda extends Component {
                     </div>
                 </nav>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <h4 className="float-left col-lg-12" style={{ marginLeft: '-400px' }}> <b>Add Customer Here</b> </h4><br /><br />
+                    <h4 className="float-left col-lg-12" style={{ marginLeft: '-332px' }}> <b>Add Customer Here</b> </h4><br /><br />
                     <div className="">
                         <Field
                             name='email'
