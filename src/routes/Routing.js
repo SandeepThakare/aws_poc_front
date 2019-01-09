@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import POC_Lambda from '../components/lambda';
 import Dashboard from '../components/dashboard';
 import CustomersView from '../components/lambda_list';
+import S3Upload from '../components/s3-upload';
 
 const Routing = () => (
     <div>
@@ -14,6 +15,7 @@ const Routing = () => (
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/poc_lambda' component={POC_Lambda} />
             <Route exact path='/customers_list' component={CustomersView} />
+            <Route exact path='/s3_upload' component={S3Upload} />
         </Switch>
     </div>
 );

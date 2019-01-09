@@ -38,6 +38,11 @@ export default class Sidebar extends Component {
                                             <i className="fa fa-home"></i> POC Lambda 
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link to={'/s3_upload'}>
+                                            <i className="fa fa-home"></i> POC S3 
+                                        </Link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
