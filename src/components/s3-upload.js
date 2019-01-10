@@ -66,10 +66,9 @@ class S3Upload extends Component {
                         :
                         <label className="file-btn btn btn-primary float-left label-cursor">Select File</label>
                     }
-                    <button className="btn btn-success float-left marg-left"> Upload </button>
+                    <button className="btn btn-success float-left marg-left" onClick={(e) => this._handleSubmit(e)}> Upload </button>
                     <br /> <br />
                 </form>
-                <hr />
             </div>
         );
     }
