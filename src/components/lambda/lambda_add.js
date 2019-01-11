@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { addCustomer } from '../actions/customer';
-import { getCustomer } from '../actions/customer';
+import { addCustomer } from '../../actions/customer';
+import { getCustomer } from '../../actions/customer';
 import { Link } from 'react-router-dom';
 
 class POC_Lambda extends Component {
@@ -55,26 +55,10 @@ class POC_Lambda extends Component {
         // const { handleSubmit } = this.props;
         return (
             <div >
-                <nav className="navbar navbar-inverse">
-                    <div className="container">
-                        <ul className="nav">
-                            <li className='active'>
-                                <Link to={'/poc_lambda'}>
-                                    <i className="fa fa-plus"></i>   New Customer
-                                </Link>
-                            </li>
-                            {/* <li className='active'><a href="#">New Customer</a></li> */}
-                            {/* <li><a href="#">View Customer</a></li> */}
-                            <li>
-                                <Link to={'/customers_list'}>
-                                    <i className="fa fa-list"></i>   View Customer
-                                </Link>
-                            </li>
-                        </ul>
+                <div>
+                        <h2 className='heading'>Add New Customer</h2>
                     </div>
-                </nav>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <h4 className="float-left col-lg-12" style={{ marginLeft: '-332px' }}> <b>Add Customer Here</b> </h4><br /><br />
                     <div className="">
                         <Field
                             name='email'
@@ -151,9 +135,9 @@ class POC_Lambda extends Component {
                         <button type="submit" style={{ marginLeft: "30px" }} name="Submit" value="Submit" className="btn btn-success float-left">
                             Submit
                         </button>
-                        <button type="clear" style={{ marginLeft: "10px" }} name="Submit" value="Submit" className="btn btn-danger float-left">
+                        <Link type="clear" style={{ marginLeft: "10px" }} to='/list_customer'className="btn btn-danger float-left">
                             Cancel
-                        </button>
+                        </Link>
                     </div>
                 </form>
             </div>

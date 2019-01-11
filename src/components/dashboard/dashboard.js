@@ -4,9 +4,9 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <dev>
-                <h1>Documentation Page !!!!</h1>
-            </dev>
+            <div>
+                <h1 className='heading'>Welcome !!!!</h1>
+            </div>
         )
     }
 }
