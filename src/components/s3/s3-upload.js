@@ -65,7 +65,7 @@ class S3Upload extends Component {
                 <form onSubmit={(e) => this._handleSubmit(e)}>
                     <input type="file" type="file" className="btn btn-primary" name="pic" accept="image/*" id="test" style={{ display: "none" }} className="btn btn-primary" onChange={(e) => this.handleChange(e)} name="pic" accept="image/*" />
                     { this.state.image_buffer == '' ?
-                        <label for="test" className="file-btn btn btn-primary float-left">Select File</label>
+                        <label htmlFor="test" className="file-btn btn btn-primary float-left">Select File</label>
                         :
                         <label className="file-btn btn btn-primary float-left label-cursor">Select File</label>
                     }

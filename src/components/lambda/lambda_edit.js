@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { addCustomer } from '../actions/customer';
-import { getCustomerByEmail } from '../actions/customer';
+import { addCustomer } from '../../actions/customer';
+import { getCustomerByEmail } from '../../actions/customer';
 import { Link } from 'react-router-dom';
 
 class EditCustomer extends Component {
