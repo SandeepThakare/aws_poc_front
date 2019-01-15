@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { uploadImage } from '../actions/imageAtion';
+import { uploadImage } from '../../actions/imageAtion';
 
 class S3Upload extends Component {
 

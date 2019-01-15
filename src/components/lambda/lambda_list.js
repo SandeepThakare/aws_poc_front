@@ -46,7 +46,7 @@ class CustomersView extends Component {
                 <div>
                     <div className="table-responsive">
                     <Link className="btn btn-info float-right" to={'/new_customer'}>
-                                    <span ><i className='fa fa-plus'></i>New Customer</span>
+                                    <span ><i className='fa fa-plus'></i>  New Customer</span>
                                 </Link>
                         <table className="table table-striped">
                             <thead>

@@ -1700,3 +1700,7 @@ hr {
 .label-cursor {
   cursor: not-allowed !important;
 }
+
+.fa-edit {
+  font-size: 15px !important
+}
