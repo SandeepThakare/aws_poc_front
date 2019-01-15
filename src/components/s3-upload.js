@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { uploadImage } from '../actions/imageAtion';
 
 class S3Upload extends Component {
 
@@ -6,8 +8,7 @@ class S3Upload extends Component {
         super(props);
 
         this.state = {
-            image_buffer: '',
-            image_preview_url: ''
+            image_buffer: ''
         }
     }
 
@@ -41,7 +42,9 @@ class S3Upload extends Component {
     }
 
     _handleSubmit(e) {
+        e.preventDefault();
 
+        this.props.uploadImage(this.state);
     }
 
     render() {
@@ -74,4 +77,11 @@ class S3Upload extends Component {
     }
 }
 
-export default S3Upload;
+function mapStateToProps(state, ownProps) {
+    console.log('State ----> ', state);
+    return {
+        uploadImageRes: state.uploadImage.UploadImageRes
+    }
+}
+
+export default connect(mapStateToProps, { uploadImage })(S3Upload);

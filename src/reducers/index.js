@@ -7,6 +7,7 @@ import delUser from './deluser';
 import addCustomer from './addCustomer';
 import getCustomerList from './getuser';
 import getCustomerByEmail from './getCustomerByEmail';
+import uploadImage from './uploadImage';
 
 const rootReducer = combineReducers({
     usersReducer:usersReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     addCustomer,
     getCustomerList,
     getCustomerByEmail,
+    uploadImage,
     form: reduxFormReducer,
     router: routerReducer
 })
