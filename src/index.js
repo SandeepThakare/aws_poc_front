@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 // import { store, history} from './store';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
-import "./index.css";
-import App from "./components/App";
+import "./styles/index.css";
+import App from "./components/main/App";
 import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux"; //react-redux is the official package used to make Redux and React work together.
 // import store from './store';

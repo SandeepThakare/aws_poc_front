@@ -10,7 +10,7 @@ export default class Header extends Component {
                         <i className="fa fa-bars"></i>
                     </button>
                 </div>
-                <div className="header-block header-block-search">
+                {/* <div className="header-block header-block-search">
                     <form role="search">
                         <div className="input-container">
                             <i className="fa fa-search"></i>
@@ -18,7 +18,7 @@ export default class Header extends Component {
                             <div className="underline"></div>
                         </div>
                     </form>
-                </div>
+                </div> */}
                 <div className="header-block header-block-nav">
                     <ul className="nav-profile">
                         <li className="notifications new">

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCustomer } from '../actions/customer';
-import EditCustomer from './lambda-edit';
+import { getCustomer } from '../../actions/customer';
+import EditCustomer from './lambda_edit';
+import { Link } from 'react-router-dom';
+
 
 class CustomersView extends Component {
 
@@ -39,10 +41,13 @@ class CustomersView extends Component {
     render() {
 
         return (
-            <div className="boxFrame">
+            <div>
                 {/* <div className="boxTitle roundTop">All Customers List <a href="#" className="arrowLink posRT"></a></div> */}
-                <div className="boxpad">
+                <div>
                     <div className="table-responsive">
+                    <Link className="btn btn-info float-right" to={'/new_customer'}>
+                                    <span ><i className='fa fa-plus'></i>New Customer</span>
+                                </Link>
                         <table className="table table-striped">
                             <thead>
                                 <tr>
